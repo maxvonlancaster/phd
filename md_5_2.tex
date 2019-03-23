@@ -1,0 +1,56 @@
+\section{Рівномірна відстань до простору $C(X)$ неперервних функцій на нормальному просторі $X$.}
+
+\begin{theorem}
+\label{rvc_t1}
+Нехай $g:X\to {\mathbb R}$ - функція. Тоді відстань від функції $g$ до простору неперервних функцій на $X$ дорівнює $\frac{1}{2} \left\| \omega _{g} \right\| =\delta $
+\end{theorem}
+
+\begin{proof}
+Доведемо, що $d(g,C(X))\ge \delta $. При $\delta =0$,$\left\| \omega _{g} \right\| =0$, і $g\in C(X)$, а отже, $d(g,C(X))=0$
+
+Розглянемо $\delta >0$. Нехай $x\in X$, $U$ - окіл точки $x$ в $X$, $x'$ і $x''$$\in U$, $f\in C(X)$. Тоді:
+
+\[\left|g(x')-g(x'')\right|=\left|g(x')-f(x')+f(x')-f(x'')+f(x'')-g(x'')\right|\le \left|g(x')-f(x')\right|+\]
+
+\[+\left|f(x')-f(x'')\right|+\left|f(x'')-g(x'')\right|\le \left\| f-g\right\| +\omega _{f} (U)+\left\| f-g\right\| \]
+
+Отже, $\omega _{g} (U)\le 2\left\| f-g\right\| +\omega _{f} (U)$. Тоді,
+
+\[0\le \omega _{g} (x)=\mathop{\inf }\limits_{U\in U_{x} } \omega _{g} (U)\le \inf (2\left\| f-g\right\| +\omega _{f} (U))=2\left\| f-g\right\| , \forall x\in X\]
+
+($\mathop{\inf }\limits_{U\in U_{x} } \omega _{f} (U)=0$, оскільки $f\in C(X)$), а значить, $\left\| \omega _{g} \right\| \le 2\left\| f-g\right\| $. Звідси $\left\| f-g\right\| \ge \frac{1}{2} \left\| \omega _{g} \right\| =\delta $. Отже, $d(g,C(X))\ge \delta $ у випадку, коли $\left\| \omega _{g} \right\| \le +\infty $ і $d(g,C(X))=+\infty =\delta $, коли $\left\| \omega _{g} \right\| =+\infty $
+
+Нехай тепер $\left\| \omega _{g} \right\| \le +\infty $. Доведемо, що $d(g,C(X))\le \delta $. Для цього покладемо:
+
+\[g_{1} (x)=\mathop{\inf }\limits_{U\in U_{x} } \mathop{\sup }\limits_{u\in U} g(u)-\delta =g^{*} (x)-\delta \]
+
+\[g_{2} (x)=\mathop{\sup }\limits_{U\in U_{x} } \mathop{\inf }\limits_{u\in U} g(u)+\delta =g_{*} (x)+\delta \]
+
+Доведемо, що $g_{1} :X\to {\mathbb R}\cup \{ +\infty \} $ - напівнеперервна зверху, $g_{2} :X\to {\mathbb R}\cup \{ -\infty \} $ - напівнеперервна знизу, і $g_{1} \le g_{2} $.
+
+Позначимо $M_{g} (U)=\mathop{\sup }\limits_{u\in U} g(u)$, $m_{g} (U)=\mathop{\inf }\limits_{u\in U} g(u)$.
+
+Спочатку доведемо, що $g^{*} $ - напівнеперервна зверху. Візьмемо $\varepsilon >0$ та $x\in X$ такі, щоб $g^{*} (x)<+\infty $. Очевидно, що $g^{*} (x)+\varepsilon >g^{*} (x)$. Існує окіл $U\in U_{x} $, такий, що $M_{g} (U)<g^{*} (x)+\varepsilon $. За означенням інфімуму, $\forall u\in U$, $g^{*} (u)\le M_{g} (U)$. Отже, $g^{*} (u)<g^{*} (x)+\varepsilon $, $\forall u\in U$. Маємо, що $\forall x\in X$ або $g^{*} (x)=+\infty $, або $\forall \varepsilon >0$ $\exists U\in U_{x} $, такий, що $\forall u\in U$ $g^{*} (u)<g^{*} (x)+\varepsilon $. Отже, $g^{*} $ - напівнеперервна зверху.
+
+Доведемо тепер, що $g_{*} $ - напівнеперервна знизу. Візьмемо $\varepsilon >0$ та $x\in X$ такі, щоб $g_{*} (x)>-\infty $. Очевидно, що $g_{*} (x)-\varepsilon <g_{*} (x)$. Існує окіл $U\in U_{x} $, такий, що $m_{g} (U)>g_{*} (x)-\varepsilon $. За означенням супремуму, $\forall u\in U$, $g_{*} (u)\ge m_{g} (U)$. Отже, $g_{*} (u)>g_{*} (x)-\varepsilon $, $\forall u\in U$. Маємо, що $\forall x\in X$ або $g_{*} (x)=-\infty $, або $\forall \varepsilon >0$ $\exists U\in U_{x} $, такий, що $\forall u\in U$ $g_{*} (u)>g_{*} (x)-\varepsilon $. Отже, $g_{*} $ - напівнеперервна знизу.
+
+Тепер доведемо, що $g_{1} (x)\le g_{2} (x)$, $\forall x\in X$. Для цього спочатку доведемо, що$\omega _{g} (x)=g^{*} (x)-g_{*} (x)$. Покажемо, що $\omega _{g} (U)=M_{g} (U)-m_{g} (U)$:
+
+\[\omega _{g} (U)=\mathop{\sup }\limits_{x',x''\in U} \left|g(x')-g(x'')\right|=\mathop{\sup }\limits_{x',x''\in U} (g(x')-g(x''))=\sup (g(U)+(-g(U)))=\]
+
+\[=\sup g(U)+\sup (-g(U))=\sup g(U)-\inf g(U)=M_{g} (U)-m_{g} (U)\]
+
+Виберемо $\varepsilon >0$. Очевидно, що $\omega _{g} (x)+\varepsilon >\omega _{g} (x)$. Існує окіл $U\in U_{x} $, такий, що $\omega _{g} (U)<\omega _{g} (x)+\varepsilon $. Але $\omega _{g} (U)=M_{g} (U)-m_{g} (U)$. За означенням супремуму та інфімуму: $g^{*} (u)\le M_{g} (U)$ та $g_{*} (u)\ge m_{g} (U)$. Звідси отримуємо: $g^{*} (x)-g_{*} (x)\le M_{g} (U)-m_{g} (U)<\omega _{g} (x)+\varepsilon $. Спрямуємо $\varepsilon \to 0$, отримуємо, що $g^{*} (x)-g_{*} (x)\le \omega _{g} (x)$.
+
+Виберемо $\varepsilon >0$. Існує окіл $U_{1} \in U_{x} $, такий, що $M_{g} (U_{1} )<g^{*} (x)+\varepsilon $, та існує окіл $U_{2} \in U_{x} $, такий, що $m_{g} (U_{2} )>g_{*} (x)-\varepsilon $. Розглянемо $U=U_{1} \cap U_{2} \in U_{x} $. Оскільки $U\subseteq U_{1} $, то $m_{g} (U)\le M_{g} (U_{1} )<g^{*} (x)+\varepsilon $, та оскільки $U\subseteq U_{2} $, то $m_{g} (U)\ge m_{g} (U_{2} )>g_{*} (x)-\varepsilon $. Таким чином, маємо:
+
+\[\omega _{g} (x)\le \omega _{g} (U)=M_{g} (U)-m_{g} (U)<(g^{*} (x)+\varepsilon )-(g_{*} (x)-\varepsilon )=g^{*} (x)-g_{*} (x)+2\varepsilon \]
+
+Спрямуємо $\varepsilon \to 0$, отримуємо $g^{*} (x)-g_{*} (x)\ge \omega _{g} (x)$.
+
+Таким чином, оскільки $g^{*} (x)-g_{*} (x)=\omega _{g} (x)$, то $g^{*} (x)-g_{*} (x)\le 2\delta =\left\| \omega _{g} \right\| $, звідси $g^{*} (x)-\delta \le g_{*} (x)+\delta $, а отже, $g_{1} (x)\le g_{2} (x),\forall x\in X$
+
+Оскільки $g_{1} (x)\le g_{2} (x)$, то $g_{1} (x)<+\infty $, і $g_{2} (x)>-\infty $ $\forall x\in X$. Маємо, що $g_{1} $ - напівнеперервна зверху, $g_{2} $ - напівнеперервна знизу, $g_{1} \le g_{2} $, отже, $\exists f$ - неперервна, така, що $g_{1} \le f\le g_{2} $. Звідси випливає, що $f-\delta \le g_{2} -\delta $, та $g_{1} +\delta \le f+\delta $. А отже, $f-\delta \le g_{2} -\delta =g_{*} \le g\le g^{*} =g_{1} +\delta \le f+\delta $, а отже, $f-\delta \le g\le f+\delta $, звідси випливає, що $\left\| f-g\right\| \le \delta $, тому $d(g,C(X))\le \delta $.
+
+Отже, $d(g,C(X))=\delta $. 
+\end{proof}

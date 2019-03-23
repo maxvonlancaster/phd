@@ -1,0 +1,201 @@
+\documentclass[12pt]{report}
+\usepackage[cp1251]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{makeidx}
+\usepackage{amsmath}
+%\usepackage[latin1]{inputenc}
+
+\usepackage{misccorr} % в заголовках зєвляється крапка, али при посиланні на них її немає
+\usepackage{indentfirst} % після заголовків ставится абзацний відступ
+
+\usepackage{kd}
+\sloppy \setlength{\voffset}{-20mm} \setlength{\hoffset}{-15mm}
+\setlength{\textwidth}{165mm} \setlength{\textheight}{250mm}
+
+\renewcommand{\baselinestretch}{1.29}
+
+\makeindex
+\sloppy
+
+\begin{document}
+\large
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}{Лема}[section]
+\newtheorem{corollary}{Наслідок}[section]
+\newtheorem{proposition}{Твердження}[section]
+\newtheorem{example}{Приклад}[section]
+\newtheorem{remark}{Зауваження}[section]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%Український покажчик індексів%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\IA}[1]{\index{$\protect\phantom{01}$#1}}%А
+\newcommand{\IB}[1]{\index{$\protect\phantom{02}$#1}}%Б
+\newcommand{\IV}[1]{\index{$\protect\phantom{03}$#1}}%В
+\newcommand{\IH}[1]{\index{$\protect\phantom{04}$#1}}%Г
+\newcommand{\IG}[1]{\index{$\protect\phantom{05}$#1}}%Ґ
+\newcommand{\ID}[1]{\index{$\protect\phantom{06}$#1}}%Д
+\newcommand{\IE}[1]{\index{$\protect\phantom{07}$#1}}%Е
+\newcommand{\IJe}[1]{\index{$\protect\phantom{08}$#1}}%Є
+\newcommand{\IZh}[1]{\index{$\protect\phantom{09}$#1}}%Ж
+\newcommand{\IZ}[1]{\index{$\protect\phantom{10}$#1}}%З
+\newcommand{\IY}[1]{\index{$\protect\phantom{11}$#1}}%И
+\newcommand{\II}[1]{\index{$\protect\phantom{12}$#1}}%І
+\newcommand{\IJi}[1]{\index{$\protect\phantom{13}$#1}}%Ї
+\renewcommand{\IJ}[1]{\index{$\protect\phantom{14}$#1}}%Й
+\newcommand{\IK}[1]{\index{$\protect\phantom{15}$#1}}%К
+\newcommand{\IL}[1]{\index{$\protect\phantom{16}$#1}}%Л
+\newcommand{\IM}[1]{\index{$\protect\phantom{17}$#1}}%М
+\newcommand{\IN}[1]{\index{$\protect\phantom{18}$#1}}%Н
+\newcommand{\IO}[1]{\index{$\protect\phantom{19}$#1}}%О
+\newcommand{\IP}[1]{\index{$\protect\phantom{20}$#1}}%П
+\newcommand{\IR}[1]{\index{$\protect\phantom{21}$#1}}%Р
+\newcommand{\IS}[1]{\index{$\protect\phantom{22}$#1}}%С
+\newcommand{\IT}[1]{\index{$\protect\phantom{23}$#1}}%Т
+\newcommand{\IU}[1]{\index{$\protect\phantom{24}$#1}}%У
+\newcommand{\IF}[1]{\index{$\protect\phantom{25}$#1}}%Ф
+\newcommand{\IKh}[1]{\index{$\protect\phantom{26}$#1}}%Х
+\newcommand{\ITs}[1]{\index{$\protect\phantom{27}$#1}}%Ц
+\newcommand{\ICh}[1]{\index{$\protect\phantom{28}$#1}}%Ч
+\newcommand{\ISh}[1]{\index{$\protect\phantom{29}$#1}}%Ш
+\newcommand{\ISch}[1]{\index{$\protect\phantom{30}$#1}}%Щ
+\newcommand{\IJu}[1]{\index{$\protect\phantom{31}$#1}}%Ю
+\newcommand{\IJa}[1]{\index{$\protect\phantom{32}$#1}}%Я
+
+\newcommand{\IX}[1]{\index{$\protect\phantom{99}$\protect\newpage! #1}}%формули
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\indexname{СПИСОК ТЕРМІНІВ ТА УМОВНИХ ПОЗНАЧЕНЬ  }
+
+
+\def\bibname{СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ}
+\def\contentsname{ЗМІСТ}\def\chaptername{РОЗДІЛ}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+\begin{center}
+Чернівецький національний університет імені Юрія Федьковича
+
+\vspace{1cm} {\it на правах рукопису}
+
+\vspace{1cm} {\bf Мельник Василь Сергійович }
+\end{center}
+
+\vspace{1cm} \rightline{\bf УДК 517.51}
+
+\vspace{1cm}
+\begin{center}
+{\LARGE\bf РІВНОМІРНІ ВІДСТАНІ\\ ДО РІЗНИХ ФУНКЦІОНАЛЬНИХ КЛАСІВ\\ ТА РОЗВИТОК ТЕОРЕМИ ГАНА\\ ПРО ПРОМІЖНІ ФУНКЦІЇ}
+
+\vspace{1cm} 01.01.01 -- математичний аналіз
+
+\vspace{0.4cm}
+Дисертація на здобуття наукового ступеня\\
+кандидата фізико-математичних наук
+
+\vspace{0.4cm}
+Дисертація містить результати власних досліджень. Використання ідей, результатів і текстів інших авторів мають посилання\\ на відповідне джерело\\
+\end{center}
+
+
+\vspace{1cm}
+\begin{flushright}
+{\bf Науковий керівник:}\\
+Маслюченко Володимир Кирилович,\\
+доктор фізико-математичних наук,\\
+професор\\
+\end{flushright}
+
+\vspace{1cm} \centerline{Чернівці -- 2 0 1 8}
+
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{2}
+
+\setcounter{tocdepth}{1}
+\input annotat.tex
+\input publ.tex
+\tableofcontents
+
+
+\renewcommand{\baselinestretch}{1.24}
+%\renewcommand{\baselinestretch}{1.24}
+
+\input vstup.tex
+\input md_1_1.tex
+
+\input md_1_3.tex
+\input md_1_4.tex
+
+\input md_1_6.tex
+\input md_1_7.tex
+
+\input md_1_9.tex
+\input md_1_11.tex
+
+\input md_2_2.tex
+
+\input md_2_4.tex
+
+\input md_2_6.tex
+
+\input md_2_8.tex
+
+\input md_3_3.tex
+\input md_3_4.tex
+\input md_3_5.tex
+\input md_3_6.tex
+\input md_3_7.tex
+\input md_3_8.tex
+
+
+\input md_vysn3.tex
+
+
+\input md_4_6.tex
+\input md_4_7.tex
+\input md_4_8.tex
+\input md_4_9.tex
+\input md_vysn4.tex
+
+\input md_5_1.tex
+\input md_5_2.tex
+
+\input md_5_4.tex
+\input md_5_5.tex
+
+
+\input md_vysn5.tex
+\input md_vysnovky.tex
+
+
+%\renewcommand{\baselinestretch}{1.2}
+\input pozn.tex
+\input md_lit_1.tex
+
+
+
+\end{document}

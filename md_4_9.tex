@@ -1,0 +1,154 @@
+\section{Пара Гана і нульова обернена задача}
+
+Згідно з оберненною теоремою Бернштейна для кожної спадної нескінченно малої послідовності невід'ємних чисел $\alpha_n$, $n=0, 1, \ldots, $ існує така неперервна функція $f: [a,b]\rightarrow \mathbb{R}$, що для кожного $n$ її найкраще рівномірне наближення $E_n(f)$ многочленами степеня $\leq n$ дорівнює $\alpha_n$. Ця теорема послужила відправною точкою для багатьох узагальнень та аналогів.
+
+
+\noindent{\bf 4.4.1. Пара Гана, що пов'язана з нарізно неперервною функцією.}
+
+
+\begin{theorem}
+\label{zt_t1}  Нехай $X$ -- топологічний простір, $Y$ -- непорожня множина, $f: X\times Y \rightarrow \mathbb{R}$ -- неперервна відносно першої змінної і обмежена відносно другої функція і $g(x)=\inf\limits_{y\in Y}f^x(y)$, a $h(x)=\sup\limits_{y\in Y}f^x(y)$ на $X$. Тоді $(g,h)$ -- це пара Гана на $X$.
+\end{theorem}
+
+\begin{proof} Ясно, що функції $g$ i $h$ набувають скінченних значень.
+Нерівність $g(x)\leq h(x)$, очевидно, виконується для кожного $x\in X$. Доведемо, що функція $g: X\rightarrow \mathbb{R}$ напівнеперервна зверху, а $h$ -- знизу. Нехай $x_0\in X$ i $\varepsilon>0$. З означення інфімуму випливає, що існує така точка $y_1 \in Y$, що $f^{x_0}(y_1)<g(x_0)+\frac{\varepsilon}{2}$. З неперервності функції $f_{y_1}$  у точці $x_0$ випливає, що існує такий окіл $U$ точки $x_0$ в  $X$, що $f_{y_1}(x)<f_{y_1}(x_0)+\frac{\varepsilon}{2}$ на $U$. Тоді при $x\in U$ виконується нерівність
+$$g(x)\leq f^x(y_1)=f_{y_1}(x)<f_{y_1}(x_0)+\frac{\varepsilon}{2}=f^{x_0}(y_1)+\frac{\varepsilon}{2}
+<g(x_0)+\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=g(x_0)+\varepsilon,$$
+що дає нам напівнеперервність зверху функції $g$ в точці $x_0$.
+
+Так само існує $y_{2}\in Y$, що $f^{x_0}(y_2)>h(x_0)-\frac{\varepsilon}{2}$. З неперервності функції $f_{y_2}$  у точці $x_0$ випливає, що існує такий окіл $U$ точки $x_0$ в  $X$, що $f_{y_2}(x)>f_{y_2}(x_0)-\frac{\varepsilon}{2}$ на $U$. Тоді для $x\in U$ маємо:
+
+$$g(x)\geq f^x(y_2)=f_{y_2}(x)>f_{y_2}(x_0)-\frac{\varepsilon}{2}=f^{x_0}(y_2)-\frac{\varepsilon}{2}
+>h(x_0)-\frac{\varepsilon}{2}-\frac{\varepsilon}{2}=h(x_0)-\varepsilon,$$
+а це означає, що функція $h$ напівнеперервна знизу  в точці $x_0$.
+
+\end{proof}
+
+\medskip\noindent{\bf Зауваження.} Ясно, що для доведення напівнеперервності зверху функції $g$ ми використали лише те, що функції $f_{y}$ напівнеперервні зверху, а для напівнеперервності знизу функції $h$ -- лише те, що функції $f_{y}$ напівнеперервні знизу.
+
+\medskip\noindent{\bf Наслідок.} Нехай $X$ -- топологічний простір, $Y$ -- непорожній компактний простір, $f: X\times Y \rightarrow \mathbb{R}$ -- нарізно неперервна функція і $g(x)=\min\limits_{y\in Y}f^x(y)$, a $h(x)=\max\limits_{y\in Y}f^x(y)$ на $X$. Тоді $(g,h)$ -- це пара Гана на $X$.
+
+
+
+ \noindent{\bf 4.4.2. Побудова нарізно неперервної функції з даними максимумами чи мінімумами}
+
+Для довільної функції $f: X\times Y\rightarrow \mathbb{R}$ визначимо функції $S_{f}: X\rightarrow (-\infty, +\infty]$ та $I_{f}: X\rightarrow [-\infty, +\infty)$ формулами
+
+$$S_f(x)=\sup\limits_{y\in Y}f(x,y) \qquad \mbox{та} \qquad I_f(x)=\inf\limits_{y\in Y}f(x,y).$$
+У попередньому пункті ми з'ясували, що для довільних топологічних просторів $X$  i $Y$ і нарізно неперервної функції $f$ функції $S_f$ та  $I_f$ будуть напівнеперервними знизу і зверху відповідно, якщо вони набувають скінченних значень. Легко перевірити, що це збережеться і у випадку нескінченних значень. Природно постають і обернені задачі: для для напівнеперервних зверху і знизу функцій $h: X\rightarrow\mathbb{R}$ i $g: X\rightarrow\mathbb{R}$ побудувати нарізно неперервну функцію $f: X\times Y\rightarrow \mathbb{R}$, таку, що: а)$S_f=h$; б)$I_f=g $;  в)$(I_f, S_f)=(g, h)$, якщо  $g(x)\leq h(x)$ на  $X$. Тут ми займемося двома першими задачами а) і б).
+
+Для цього нам буде потрібен один результат Тонґа \cite[c.106]{Engelking}, який ми подамо у розширеній редакції.
+
+\begin{theorem}
+\label{zt_t2}  Для $T_1$-простору $X$ наступні умови рівносильні:
+
+(і) $X$ -- досконало нормальний простір;
+
+(іі) для кожної напівнеперервної знизу функції $h: X\rightarrow\mathbb{R}$ існує така зростаюча послідовність неперервних функцій $h_n: X\rightarrow\mathbb{R}$, що $h_n(x)\rightarrow h(x)$ на $X$;
+
+(ііі) для кожної напівнеперервної зверху функції $g: X\rightarrow\mathbb{R}$ існує така спадна послідовність неперервних функцій $g_n: X\rightarrow\mathbb{R}$, що $g_n(x)\rightarrow g(x)$ на $X$;
+
+(іv) для кожної напівнеперервної знизу функції $h: X\rightarrow\mathbb{R}$ існує така послідовність неперервних функцій $h_n: X\rightarrow\mathbb{R}$, що $h_n(x)\rightarrow h(x)$ на $X$ i $h_n(x)\leq h(x)$ на $X$ для кожного $n$;
+
+(v)  для кожної напівнеперервної зверху функції $g: X\rightarrow\mathbb{R}$ існує така  послідовність неперервних функцій $g_n: X\rightarrow\mathbb{R}$, що $g_n(x)\rightarrow g(x)$ на $X$ i $g_n(x)\geq g(x)$ на $X$ для кожного $n$;
+\end{theorem}
+
+Скористаємося методом, застосовним у \cite{Bernstein_rus} для побудови нарізно неперервної функції $f: X^2\rightarrow \mathbb{R}$ з даною діагоналлю, що належить до першого класу Бера.
+
+\begin{theorem}
+\label{zt_t3}  Нехай $h: X\rightarrow \mathbb{R}$ -- напівнеперервна знизу функція, що задана на досконало нормальному просторі $X$ з нормальним квадратом $X^2$, в якому діагональ $\Delta=\{(x,x): x\in X\}$ є $G_{\delta}$-множиною, і $h_0: X\rightarrow \mathbb{R}$ -- неперервна функція, для якої $h_0(x)\leq h(x)$ на $X$. Тоді існує така нарізно неперервна функція $f: X^2\rightarrow \mathbb{R}$, що $h_0(x)\leq f(x,y)\leq h(x)$ на $X^2$ i $S_f(x)=h(x)$ на $X$.
+\end{theorem}
+
+ \begin{proof} Згідно з теоремою Тонґа існує така послідовність неперервних функцій $f_n:X\rightarrow \mathbb{R}$, що $f_n(x)\rightarrow h(x)$ на $X$ і $f_n(x)\leq h(x)$ на $X$ для кожного $n$. Функції $h_n(x)=\max \{f_n(x), h_0(x)\}$ теж неперервні і для них уже $h_0(x)\leq h_n (x)\leq h(x)$ на $X$, причому як і раніше $h_n(x)\rightarrow h(x)$ на $X$.
+
+ Використовуючи побудову з доведення теореми 1 з [9] ми можемо визначити таку локально скінченну послідовність неперервних функцій $\varphi_n: X^2\rightarrow [0,1]$, що $\sum\limits_{n=1}^{\infty}\varphi_n(p)=1$ на $X^2\backslash \Delta$ i $\varphi_k(p)=0$ на $\Delta$ для довільного $k$, для якої функція
+ $$f(x,y)=h(x)\chi_{\Delta}(x,y)+\sum\limits_{n=1}^{\infty}\varphi_n(x,y)h_n(x)$$
+нарізно неперервна і $f(x,x)=h(x)$  на $X$ (тут $\chi_{A}$ -- характеристична функція множини $A$).
+Оскільки $h_0(x)\leq h_n(x)\leq h(x)$ на $X$, $\varphi_n(x,y)\geq 0$ на $X^2$ для кожного $n$ i  $\sum\limits_{n=1}^{\infty}\varphi_n(p)=1$ при $x\neq y$, то при $x\neq y$
+$$h_0(x)=(\sum\limits_{n=1}^{\infty}\varphi_n(x,y))h_0(x)\leq f(x,y)=$$ $$=\sum\limits_{n=1}^{\infty}\varphi_n(x,y)h_n(x)\leq (\sum\limits_{n=1}^{\infty}\varphi_n(x,y))h(x)=h(x).$$
+Але $f(x,x)=h(x)$. Отже, $h_0(x)\leq f(x,y)\leq h(x)$  на $X^2$.
+
+Нарешті, для довільних $x\in X$ i $y\in Y$ маємо, що
+$$f(x,y)\leq h(x)=f(x,x),$$
+отже, $S_f(x)=\max\limits_{y\in Y}f^x(y)=h(x)$.
+
+\end{proof}
+
+З цієї теореми легко вивести і наступнй результат
+
+\begin{theorem}
+\label{zt_t4}  Нехай $g: X\rightarrow \mathbb{R}$ -- напівнеперервна зверху функція, що задана на досконало нормальному просторі $X$ з нормальним квадратом $X^2$, в якому діагональ $\Delta=\{(x,x): x\in X\}$ є $G_{\delta}$-множиною, і $g_0: X\rightarrow \mathbb{R}$ -- неперервна функція, для якої $g_0(x)\geq g(x)$ на $X$. Тоді існує така нарізно неперервна функція $f: X^2\rightarrow \mathbb{R}$, що $g(x)\leq f(x,y)\leq g_0(x)$ на $X^2$ i $I_f(x)=g(x)$ на $X$.
+\end{theorem}
+
+\noindent{\bf 4.4.3. Побудова нарізно неперервної функції з даною парою Гана, що з нею пов'язана.} Розглянемо тепер задачу в) для випадку $X=[a, b]$ i $Y=[c, d]$, де $a<b$ і $c<d$. При цьому ми використаємо теорему Гана-Д'єдонне-Тонґа-Катетова \cite[c. 105]{Engelking}.
+
+
+\begin{theorem}
+\label{zt_t5} Нехай $X=[a, b]$,  $Y=[c, d]$, $P=X\times Y$ -- прямокутник, $D=\{(x, l(x)): x\in X\}$ -- його діагональ, де $l: X\rightarrow Y$ -- лінійна функція, у якої $l(a)=c$, $l(b)=d$, $(g, h)$ -- пара Гана на $X$ і $f: X\rightarrow\mathbb{R}$ -- неперервна функція, для якої $g(x)\leq f(x)\leq h(x)$ на $X$. Тоді існують такі нарізно неперервні функції $f_1: P\rightarrow\mathbb{R}$   i $f_2: P\rightarrow\mathbb{R}$, що $g(x)\leq f_1(x,y)\leq f(x)\leq f_2(x,y)\leq h(x)$ на $P$,  $I_{f_1}(x)=g(x)=f_1(x, l(x))$ i $S_{f_2}(x)=h(x)=f_2(x, l(x))$ на $X$.
+\end{theorem}
+
+\begin{proof} Розглянемо лінійні заміни
+$$x=\varphi(t)=a+(b-a)t \quad \mbox{i} \quad y=\psi(s)=c+(d-c)s,$$
+які гомеоморфно відображають відрізок $[0,1]$ на відрізки $X$ i $Y$ відповідно і гомеоморфізм $\gamma: [0,1]^2\rightarrow P$, $\gamma(t,s)=(\varphi(t), \psi(s))$, для якого $ \gamma(\Delta)=D$, де $\Delta$ -- діагональ квадрата $[0, 1]^2$. Застосувавши до функцій $\widetilde{h}=h\circ \varphi^{-1}$, $\widetilde{f}=f\circ \varphi^{-1}$ та $\widetilde{g}=g\circ \varphi^{-1}$ і $\widetilde{f}$ теореми 3 і 4 відповідно, отримаємо, що існують такі нарізно неперервні функції $\widetilde{f}_1: [0,1]^2\rightarrow \mathbb{R}$ i $\widetilde{f}_2: [0,1]^2\rightarrow \mathbb{R}$, що
+$\widetilde{g}(t)\leq \widetilde{f}_1(t, s)\leq \widetilde{f}(t)\leq \widetilde{f}_2(t, s)\leq h(t)$ на $[0, 1]^{2}$ i $I_{f_1}(t)=\widetilde{f}_1(t,t)=\widetilde{g}(t)$, а $S_{f_2}(t)=\widetilde{f}_2(t,t)=\widetilde{h}(t)$ на [0,1]. Функції $f_i(x,y)=\widetilde{f}_i(\varphi^{-1}(x), \psi^{-1}(y))$ теж нарізно неперервні при $i=1,2$ і для них
+$$g(x)=\widetilde{g}(\varphi^{-1}(x))\leq f_1(x,y)\leq f(\varphi^{-1}(x))=f(x)\leq f_2(x,y)\leq \widetilde{h}(\varphi^{-1}(x))=h(x)$$
+на прямокутнику $P$. При цьому, якщо $x=\varphi(t)\in X$, то
+$$I_{f_1}(x)=\min \limits_{y\in Y}f_1(x,y)=\min \limits_{0\leq s\leq 1}f_1(\varphi(t),\psi(s))=I_{\widetilde{f}_1}(t)=\widetilde{f}_1(t,t)=\widetilde{g}(t)=g(x)$$
+i
+$$S_{f_2}(x)=\max \limits_{y\in Y}f_2(x,y)=\max \limits_{0\leq s\leq 1}f_2(\varphi(t),\psi(s))=S_{\widetilde{f}_2}(t)=\widetilde{f}_2(t,t)=\widetilde{h}(t)=h(x)$$
+Разом з тим з співвідношення $x=\varphi(t)=a+(b-a)t$ знаходимо, що $t=\frac{x-a}{t-a}$, і тому $y=\psi(t)=c+(d-c)t=c+\frac{d-c}{b-a}(x-a)=l(x)$. Отже,
+$$\widetilde{f}_i(t,t)=f_i(\varphi(t), \psi(t))=f_i(x,l(x))$$
+при $i=1,2$. Таким чином,
+ $$I_{f_1}(x)=f_1(x, l(x))=g(x)\quad  \mbox{i} \quad  S_{f_2}(x=f_2(x, l(x)))=h(x)$$
+ на $X$.
+\end{proof}
+
+\begin{theorem}
+\label{zt_t6} Нехай $X=[a, b]$,  $Y=[c, d]$, де $a<b$, $c<d$ i $(g,h)$ -- довільна пара Гана на відрізку  $X$.  Тоді існує така нарізно неперервна функція $f: X\times Y\rightarrow\mathbb{R}$, що $(I_f, S_f)=(g, h)$.
+\end{theorem}
+
+\begin{proof} За теоремою Гана-Д`єдонне-Катетова-Тонґа існує така неперервна функція $f_0: X\rightarrow \mathbb{R}$, що $g(x)\leq f_0(x)\leq h(x)$ на $X$. Візьмемо які-небудь точки $y_i$, де $i=1,2$, такі, що $c<y_1<y_2<d$ і покладемо $Y_1=[c, y_1]$, $Y_2=[y_1, y_2]$, $Y_3=[y_2, d]$, $P=X\times Y$ та $P_i=X\times Y_i$ при $i=1,2$. За теоремою \ref{zt_t5}, застосованої до прямокутника $P_1$, існує така нарізно неперервна функція $f_1: P_1\rightarrow \mathbb{R}$, що
+$$g(x)=\min_{v\in Y_1}f_1(x,v)\leq f_1(x,y)\leq f_0(x) \quad \mbox{на} \quad  P_1.$$
+З цієї ж теореми, застосованої вже до прямокутника $P_3$, випливає, що існує нарізно неперервна $f_3: P_3\rightarrow \mathbb{R}$, що
+$$f_0(x)\leq f_3(x,y)\leq \max_{v\in Y_3}f_3(x,v)=h(x) \quad \mbox{на} \quad  P_3.$$
+Для кожної точки $(x,y)\in P_2$ покладемо
+$$f_2(x,y)=f_1(x,y_1)+\frac{f_3(x,y_{2})-f_1(x,y_1)}{y_2-y_1}(y-y_1).$$
+
+Функція $f_2: P_2\rightarrow \mathbb{R}$, очевидно, неперервна і
+$$f_2(x, y_1)=f_1(x, y_1), \quad \mbox{a} \quad f_2(x, y_2)=f_3(x, y_2) \ \ \textrm{на} \ \ X.$$
+Функція $f: P\rightarrow \mathbb{R}$, для якої $f|_{P_i}=f_i$ при $i=1,2,3$ визначена коректно і є нарізно неперервною Для кожного $x\in X$ за побудовою
+$$g(x)\leq f_1(x, y_1) \leq f_0(x)\leq f_3(x, y_2)\leq h(x), $$
+тому $f_1(x, y_1)\leq f_2(x, y_2)$. В такому разі при $y\in Y_2$
+$$f(x,y)=f_2(x,y)\geq f_1(x, y_1)\geq g(x)$$
+і при $y\in Y_3$
+$$f(x,y)=f_3(x,y)\geq f_0(x)\geq g(x),$$
+звідки випливає, що $g(x)=\min \limits_{y\in Y}f(x,y)=I_f(x)$.
+
+Так само при $y\in Y_1$
+$$f(x,y)=f_1(x,y)\leq f_0(x)\leq h(x),$$
+а при $y\in Y_2$
+$$f(x,y)=f_2(x,y)\leq f_3(x, y_2)\leq h(x),$$
+звідки випливає, що $h(x)=\max \limits_{y\in Y}f(x,y)=S_f(x)$.
+
+Таким чином $f: X\times Y\rightarrow \mathbb{R}$ -- шукана функція.
+
+\end{proof}
+
+\noindent{\bf 4.4.4. Нарізно непрервні функції з даним нульовим наближенням.}
+Згідно з теоремою 1 для кожної нарізно неперервної функції $f: [a,b]\times [c,d]\rightarrow \mathbb{R}$ її нульове найкраще наближення $\alpha_f$ визначається на відрізку $X=[a,b]$ формулою
+$$\alpha_f(x)=\frac{M(f^x)-m^(f^x)}{2},$$
+а тому за теоремою \ref{zt_t2} є невід'ємною і напівнеперервною знизу функцією. Справедливе і обернене твердження.
+
+\begin{theorem}
+\label{zt_t8} {\sl Для довільного прямокутника $P=X\times Y$, де $X=[a, b]$ i $Y=[c, d]$ і кожної невід'ємної напівнеперервної знизу функції $\varphi: X \rightarrow \mathbb{R}$ існує така нарізно неперервна функція $f: P \rightarrow \mathbb{R}$, що $\alpha_f=\varphi$  . }
+\end{theorem}
+
+\begin{proof} Функції $h=2\varphi$ i $g=0$ утворюють пару Гана $(g,h)$ на відрізку $X$. Тому за теоремою 6 існує така нарізно неперервна функція $f: P \rightarrow \mathbb{R}$, що $(I_f, S_f)=(g,h)$.  В такому разі
+$$m(f^x)=I_f(x)=0$$
+i
+$$M(f^x)=S_f(x)=h(x)$$
+на  $X$. Тоді
+$$\alpha_f(x)=\frac{M(f^x)-m(f^x)}{2}=\frac{2\varphi(x)}{2}=\varphi(x)$$
+на  $X$, тобто $\alpha_f=\varphi$.
+
+\end{proof}

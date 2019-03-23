@@ -1,0 +1,113 @@
+\section{Граничні множини та рівномірна відстань до $K(X)$.}
+
+
+\textbf{Означення} Нехай $X$~--- метричний прочтір, $A\subseteq X$, $\delta>0$. Замкненим $\delta$-околом множини $A$ називається множина всіх $x\in X$ таких, що $d(x,A)\leq \delta$, і позначається $V_{\delta}[A]$.
+
+Доведемо наступні властивості $\delta$-околів множин:
+
+
+\begin{lemma}
+\label{rvqs_l1}
+Нехай $A\subseteq X$. Тоді $V_{\delta}[A]$~--- замкнена.
+\end{lemma}
+
+\begin{proof} Позначимо $f(x)=d(x,A):X\rightarrow\mathbb{R}$~--- функція з $X$. Оскільки для кожного $ x',x''\in X$: $$|f(x')-f(x'')|=|d(x',A)-d(x'',A)|\leq d(x',x'')=|x'-x''|,$$ то $f$ - ріномірно неперервна на $X$, а отже і неперервна на $X$. Оскільки $[0,\delta]$~--- замкнена в $\mathbb{R}$ то $f^{-1}([0,\delta])=\{x\in X: d(x,A)=f(x)\leq\delta\}=V_{\delta}[A]$~--- замкнена в $X$ як прообраз замкненої при неперервному відображенні.
+\end{proof}
+
+\begin{lemma}
+\label{rvqs_l2}%3.6
+Нехай $A,B\subseteq X$. Тоді, якщо $A\subseteq V_{\delta}[B]$, то $\overline{A}\subseteq V_{\delta}[\overline{B}]$.
+\end{lemma}
+
+\begin{proof} Оскільки $V_{\delta}[B]\subseteq V_{\delta}[\overline{B]}$, і $V_{\delta}[B]$~--- замкнена, то з того, що $A\subseteq V_{\delta}[B]$ випливає, що $A\subseteq V_{\delta}[B]\subseteq V_{\delta}[\overline{B}] \Rightarrow \overline{A}\subseteq V_{\delta}[\overline{B}]$.
+\end{proof}
+
+
+\begin{lemma}
+\label{rvqs_l3}Нехай $X$~--- обмежений секвенціально-компактний метричний простір, $A_{n}$~--- замнкнені і $A_{n}\downarrow A$. Тоді $$\bigcap\limits_{n=1}^{\infty}V_{\delta}[A_{n}]=V_{\delta}[A]$$.
+\end{lemma}
+
+\begin{proof} Нехай $x\in \bigcap\limits_{n=1}^{\infty}V_{\delta}[A_{n}]$. Тоді $x\in V_{\delta}[A_{n}]$ для кожного $ n\in \mathbb{N}$, а отже, $d(x,A_{n})\leq\delta$ для кожного $ n\in \mathbb{N}$. Існує $x_{n}\in A_{n}$, такий, що $d(x,x_{n})\leq \delta+\frac{1}{n}$. Тоді послідовність $(x_{n})_{n=1}^{\infty}$~--- обмежена, а звідси, оскільки $X$~--- обмежений секвенціально-компактний, то існує $(x_{n_{k}})_{k=1}^{\infty}$~--- підпослідовність елементів з $(x_{n})_{n=1}^{\infty}$, таких, що $x_{n_{k}}\rightarrow a$.
+
+Оскільки для кожного $ k\in \mathbb{N}$ $n_{k}\geq k$, то $n_{k}\geq m$ для всіх $m\leq k$. А тоді $x_{n_{k}}\in A_{n_{k}}\subseteq A_{m}$ (оскільки при $k\geq m$ $A_{k}\subseteq A_{m}$). Отже, $x_{n_{k}}\in A_{m}$ для всіх $ m\in \mathbb{N}$ і для всіх $k\geq m$, а отже, окільки $A_{m}$ - замкнений, то $a\in A_{m} $ для кожного $m\in\mathbb{N}$. А тому, $a\in A$.
+
+Оскільки $d(x,x_{n_{k}})\leq \delta+\frac{1}{n_{k}}$, то спрямовуючи $k\rightarrow\infty$, маємо, що $d(x,a)\leq\delta$. Оскільки $a\in A$, то $x\in V_{\delta}[A_{n}]$, а звідси випливає, що $\bigcap\limits_{n=1}^{\infty}V_{\delta}[A_{n}]\subseteq V_{\delta}[A]$.
+
+З іншого боку, оскільки $A\subseteq A_{n}$ для кожного $ n\in \mathbb{N}$, то $V_{\delta}[A_{n}]\supseteq V_{\delta}[A]$, звідси випливає, що $\bigcap\limits_{n=1}^{\infty}V_{\delta}[A_{n}]\supseteq V_{\delta}[A]$. Таким чином, маємо, що $\bigcap\limits_{n=1}^{\infty}V_{\delta}[A_{n}]=V_{\delta}[A]$.
+\end{proof}
+
+
+
+
+
+
+
+\textbf{Означення} Нехай $X$ і $Y$~--- топологічні простори, $D\subseteq X$, $x_{0}\in \overline{D}$, $\mathcal{U}_{x_{0}}$~--- система всіх околів точки $x_{0}$ в $X$ і $f:D\rightarrow Y$~--- відображення. Перетин $C(f,x_{0})=\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}\overline{f(U\cap D)}$ називається граничною множиною відображення $f$ у точці $x_{0}$.
+
+Для $f:X\rightarrow Y$ і точки $x_{0}\in X$ ($x_{0}\in\overline{ X\setminus \{x_{0}\} }$), покладемо $\dot{f}=f|_{X\setminus \{x_{0}\}}$ і $\dot{U}=U\setminus \{x_{0} \}$. Будемо розглядати граничні множини: $$C(\dot{f},x_{0})=\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}f(\dot{U})$$.
+
+
+\begin{lemma}
+\label{rvqs_l4} Нехай $X$~--- топологічний простір, $Y$~--- компактний простір, $x_{0}\in X$, $f:X\rightarrow Y$~--- функція і $C(\dot{f},x_{0})$~--- гранична множина функції $\dot{f}=f|_{X\setminus \{x_{0}\}}:X\setminus \{x_{0}\}\rightarrow Y$. Тоді для довільної відкритої множини $W\supseteq C(\dot{f},x_{0})$ існує окіл $U\in \mathcal{U}_{x_{0}}$, такий, що $\overline{f(\dot{U})}\subseteq W$.
+\end{lemma}
+
+
+\begin{proof} Нехай $\overline{f(\dot{U})}\nsubseteq W$ для довільного $U\in \mathcal{U}_{x_{0}}$. Позначимо $F_{U}=\overline{f(\dot{U})}\setminus W\neq \emptyset$. Оскільки при $U=U_{1}\cap ...\cap U_{n}$ (де $U_{1},...,U_{n}$~--- околи з$\mathcal{U}_{x_{0}}$) $F_{U_{1}}\cap...F_{U_{n}}\supseteq F_{U}\neq \emptyset$, то $\{ F_{U}:U\in \mathcal{U}_{x_{0}} \}$~--- центрована система замкнених множин в компактному просторі $Y$. А отже, $\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}F_{U}$. Проте маємо, що: $$\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}F_{U} = \bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}(\overline{f(\dot{U})}\setminus W)=C(\dot{f},x_{0}) \setminus W=\emptyset$$ ми отримали суперечність. А отже, існує $ U\in \mathcal{U}_{x_{0}}|\overline{f(\dot{U})}\subseteq W$.
+\end{proof}
+
+\begin{theorem}
+\label{rvqs_t1} Нехай $X$~--- топологічний простір, $x_{0}\in X$, $\{ x_{0} \}$~--- замкнена множина в $X$, $x_{0}\in \overline{X\setminus \{ x_{0} \}}$, $f:X\rightarrow \mathbb{R}$~--- деяка функція і $C(\dot{f},x_{0})$~--- гранична множина функції $\dot{f}=f|_{X\setminus \{x_{0}\}}:X\setminus\rightarrow \{x_{0}\}\mathbb{R}$ зі значеннями в розширеній числовій прямій $\overline{\mathbb{R}}=\mathbb{R}\cup \{+\infty,-\infty\}$. Тоді:
+
+а) Якщо $D(f)\subseteq\{ x_{0} \}$ і $f(x_{0})\in C(\dot{f},x_{0})$, то $f\in K_{x_{0}}(X)$;
+
+б) Якщо $f(x_{0})\notin C(\dot{f},x_{0})$, то $f\notin K_{x_{0}}(X)$.
+\end{theorem}
+
+\begin{proof} а) Припустимо, що $y_{0}=f(x_{0})\in C(\dot{f},x_{0})$. Візьмемо довільне $\varepsilon >0$ і $V=(y_{0}-\varepsilon,y_{0}+\varepsilon)$~--- окіл точки $y_{0}$. Нехай $U$~--- довільний окіл $x_{0}$ в $X$, $U_{1}$~--- відкритий окіл точки $x_{0}$, такий, що $U_{1}\subseteq U$. Очевидно, що оскільки $y_{0}\in C(\dot{f},x_{0})$, то $y_{0}\in \overline{f(\dot{U_{1}})}$, а тому, оскільки $V$~--- відкрита, то $V\cap f(\dot{U_{1}})\neq\emptyset$. Отже, існує $a\in \dot{U_{1}}$, така, що $f(a)=\dot{f}(a)\in V$. Звідси $|f(a)-y_{0}|<\varepsilon$. Позначимо $\varepsilon_{0}=\varepsilon-|f(a)-y_{0}|>0$. Оскільки $a\neq x_{0}$, то функція $f$ неперервна в точці $a$, а отже, існує $U_{2}$~--- відкритий окіл точки $a$, що для кожного $ x\in U_{2} |f(x)-f(a)|<\varepsilon_{0}$. Оскільки $\{ x_{0} \}$~--- замкнена в $X$, то $\dot{U_{2}}=U_{2}\setminus \{ x_{0} \}$ - відкрита в $X$, як різниця відкритої і замкненої множин. Позначимо $G=U_{1}\cap \dot{U_{2}}$~--- відкрита (як перетин двох відкритих множин) та непорожня ($a\in U_{1}$ і $a\in U_{2}$). Крім того, для довільного $x\in G$ $$|f(x)-f(x_{0})|\leq|f(x)-f(a)|+|f(a)-f(x_{0})|< \varepsilon_{0}+|f(a)-y_{0}|=$$$$=\varepsilon-|f(a)-y_{0}|+|f(a)-y_{0}|=\varepsilon,$$ отже, $f(x)\in V$.
+
+Таким чином, для довільного $V$~--- околу точки $f(x_{0})$ і довільного околу $U$ точки $x_{0}$ існує $G\subseteq U$~--- відкрита і непорожня, така, що $f(G)\subseteq V$. Тоді маємо, що $f$~--- квазінеперервна в точці $x_{0}$.
+
+б) Припустимо, що $f(x_{0})\notin C(\dot{f},x_{0})$. Позначимо $V=\mathbb{R}\setminus C(\dot{f},x_{0})$. Оскільки $C(\dot{f},x_{0})$~--- замкнена в $\overline{\mathbb{R}}$, то $V$~--- відкрита в $\overline{\mathbb{R}}$, а значить і в $\mathbb{R}$, бо $V\subseteq\mathbb{R}$ і $\mathbb{R}$~--- відкрита в $\overline{\mathbb{R}}$. Отже, оскільки $f(x_{0})\in V$, то існує $\varepsilon>0|[y_{0}-\varepsilon,y_{0}+\varepsilon]\subseteq V$. Позначимо $W=\overline{\mathbb{R}}\setminus[y_{0}-\varepsilon,y_{0}+\varepsilon]$~--- відкрита множина в $\overline{\mathbb{R}}$. Очевидно, що $W\supseteq\overline{\mathbb{R}}\setminus V=C(\dot{f},x_{0})$. За лемою \ref{rvqs_l3} маємо, що існує окіл $U\in \mathcal{U}_{x_{0}}$, такий, що $\overline{f(\dot{U})}\subseteq W$. Окрім того, $f(x_{0})\notin W$.
+
+Виберемо $G\subseteq U$~--- непорожню відкриту множину в $X$. Нехай $x_{0}\notin G$. Тоді існує $ a\in G | a\neq x_{0}$. Якщо ж $x_{0}\in G$, то $G$~--- окіл точки $x_{0}$. А тоді, оскільки $x_{0}\in \overline{X\setminus \{ x_{0} \}}$, то $G\cap (X\setminus \{ x_{0} \})=G\cap \dot{X}\neq \emptyset$. Тобто, існує $ a\in G\cap \dot{X}$, $a\in G$ та $a\neq x_{0}$.
+
+Отже, існує $ a\in G\setminus \{ x_{0} \}$. Оскільки $a\neq x_{0}$, то $a\in \dot{U}$, а тоді $f(a)\in f(\dot{U})\subseteq \overline{f(\dot{U})}\subseteq W$. Тоді $f(a)\notin (y_{0}-\varepsilon,y_{0}+\varepsilon)=V_{0}$, а отже, $f(G)\nsubseteq V_{0}$ (бо $a\in G$).
+
+Таким чином, існує $V_{0}$~--- окіл точки $f(x_{0})$ та $U$~--- окіл точки $x_{0}$ такі, що для довільної відкритої множини $G$ околу $U$, $f(G)\nsubseteq V$. Отже, маємо, що $f$ не є квазінеперервною в точці $x_{0}$.
+\end{proof}
+
+
+
+
+
+\begin{theorem}
+\label{rvqs_t2}
+Нехай $X$~--- топологічний простір з першою аксіомою зліченності, $x_{0}$~--- неізольована точка в $X$, для якої множина $\{ x_{0} \}$~--- замкнена, і $f:X\rightarrow \mathbb{R}$~--- обмежена функція, для якої $D(f)\subseteq\{ x_{0} \}$, та $\dot{f}=f|_{X\setminus \{x_{0}\}}$. Тоді: $$d(f,K_{x_{0}}(X))=\frac{1}{2}\rho(f(x_{0}),C(\dot{f},x_{0}))=\delta$$
+\end{theorem}
+
+\begin{proof} Оскільки $C(\dot{f},x_{0}))$~--- компактна, то існує $ v_{0} \in C(\dot{f},x_{0}))$~--- така, що $\rho(y_{0},C(\dot{f},x_{0}))=\inf \{|y_{0}-v|:v\in C(\dot{f},x_{0})) \}=\min\limits_{v\in C(\dot{f},x_{0}))}^{}|y_{0}-v|=|y_{0}-v_{0}|$. Очевидно, що $|y_{0}-v_{0}|=2\delta$ і $v_{0} \in \overline{f(\dot{U})}$ для кожного $U\in \mathcal{U}_{x_{0}}$.
+
+Відповідно визначимо функцію $g_{0}$ наступним чином~--- при $y_{0}>v_{0}$ $g_{0}(x)=f(x)+\delta$ коли $x\neq x_{0}$ та $g_{0}(x)=y_{0}-\delta$ коли $x=x_{0}$; а при $y_{0}<v_{0}$ $g_{0}(x)=f(x)-\delta$ коли $x\neq x_{0}$ та $g_{0}(x)=y_{0}+\delta$ коли $x=x_{0}$. Оскільки $|f(x)-g_{0}(x)|=\delta$ для довільного $x\in X$, то $||f-g_{0}||=\delta$.
+
+Доведемо, що для довільного $U\in \mathcal{U}_{x_{0}}$ $g_{0}(x_{0})\in \overline{g_{0}(\dot{U})}$. Якщо $y_{0}>v_{0}$, то $$\overline{g_{0}(\dot{U})}=\overline{(f+\delta)(\dot{U})}=\overline{f(\dot{U})+\delta}=\overline{f(\dot{U})}+\delta$$. Оскільки $y_{0}-v_{0}=2\delta$, то $y_{0}-\delta=v_{0}+\delta$, а $g_{0}(x_{0})=f(x_{0})-\delta=y_{0}-\delta=v_{0}+\delta$. Зауважимо, що $v_{0}\in \overline{f(\dot{U})}$ адже $v_{0}\in C(\dot{f},x_{0}))$. Тому $$g_{0}(x_{0})=v_{0}+\delta\in \overline{f(\dot{U})}+\delta=\overline{g_{0}(\dot{U})}$$.
+
+Якщо ж $y_{0}<v_{0}$, то $\overline{g_{0}(\dot{U})}=\overline{(f-\delta)(\dot{U})}=\overline{f(\dot{U})-\delta}=\overline{f(\dot{U})}-\delta$ та $v_{0}+\delta\in\overline{f(\dot{U})}-\delta$. З того, що $v_{0}-y_{0}=2\delta$ маємо, що $y_{0}+\delta=v_{0}-\delta=f(x_{0})+\delta=g_{0}(x_{0})$. А тому $g_{0}(x_{0})=v_{0}-\delta\in \overline{f(\dot{U})}-\delta=\overline{g_{0}(\dot{U})}$. Таким чином, $g_{0}(x_{0})\in \overline{g_{0}(\dot{U})}$ для кожного $ U\in \mathcal{U}_{x_{0}}$. Маємо, що $g_{0}(x_{0}) \in C(\dot{g_{0}},x_{0})$, а звідси, за теоремою \ref{rvqs_t1}, маємо, що $g_{0}(x_{0})\in K_{x_{0}}(X)$.
+
+Таким чином, $d(f,K_{x_{0}}(X))\leq ||f-g_{0}||=\delta$.
+
+Доведемо тепер, що $d(f,g)\geq \delta$ при довільному $g\in K_{x_{0}}(X)$.
+
+Нехай $g\in K_{x_{0}}(X)$. Припустимо, що $g(x)>f(x)+\delta$ для деякого $x\neq x_{0}$. Тоді: $$d(f,g)=||f-g||\geq|g(x)-f(x)|=g(x)-f(x)>\delta,$$ бо $g(x)-f(x)>\delta>0$.
+
+Припустимо, що $g(x)<f(x)-\delta$ для деякого $x\neq x_{0}$. Тоді: $$d(f,g)=||f-g||\geq|f(x)-g(x)|=f(x)-g(x)>\delta,$$ бо $f(x)-g(x)>\delta>0$.
+
+Нехай тепер $f(x)-\delta\leq g(x)\leq f(x)+\delta$ для кожного $ x\neq x_{0}$. Доведемо, що тоді $|g(x_{0})-f(x_{0})|\geq\delta$. Оскільки $f(x)-\delta\leq g(x)\leq f(x)+\delta$ для кожного $ x\neq x_{0}$, то $g(x)\in V_{\delta}[f(x)]=[f(x)-\delta,f(x)+\delta]$ для кожного $ x\neq x_{0}$. Отже, для кожного $ U\in \mathcal{U}_{x_{0}}$ $g(\dot{U})\subseteq V_{\delta}[f(\dot{U})]$. Згідно з першою частиною леми \ref{rvqs_l1}, тоді $\overline{g(\dot{U})}\subseteq V_{\delta}[\overline{f(\dot{U})}]$ для всіх $ U\in \mathcal{U}_{x_{0}}$.
+
+Оскільки $X$~--- простір з першою аксіомою зліченності, то існує  $ (U_{n})_{n=1}^{}|U_{n}\supseteq U_{n+1}$ і $U_{n}$~--- окіл точки $x_{0}$ для кожного  $ n\in\mathbb{N}$, така, що $\{U_{n}:n\in\mathbb{N} \}$~--- база околів точки $x_{0}$, і $U_{n}$~--- монотонно спадаюча. А отже, $$\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}\overline{f(\dot{U})}=\bigcap\limits_{n=1}^{\infty}\overline{f(\dot{U_{n}})}.$$ Оскільки $f$ обмежена на $X\setminus x_{0}$, то і $g$ обмежена на $X\setminus x_{0}$ (тому що $f(x)-\delta\leq g(x)\leq f(x)+\delta$ для кожного $ x\neq x_{0}$). А тоді $\overline{g(\dot{U})}$ $\overline f(\dot{U_{n}})$~--- замкнені і обмежені , а отже і компактні для кожного $ U\in \mathcal{U}_{x_{0}}$.
+
+Тоді за другою частиною леми \ref{rvqs_l3}, маємо: $$C(\dot{g},x_{0})=\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}\overline{g(\dot{U})}=\bigcap\limits_{n=1}^{\infty}\overline{g(\dot{U_{n}})}\subseteq \bigcap\limits_{n=1}^{\infty} V_{\delta}[\overline{f(\dot{U_{n}})}] =$$$$=V_{\delta}[\bigcap\limits_{n=1}^{\infty}\overline{f(\dot{U_{n}})}]\subseteq V_{\delta}[\bigcap\limits_{U\in \mathcal{U}_{x_{0}}}^{}\overline{f(\dot{U})}]= V_{\delta}[C(\dot{f},x_{0})]$$ Оскільки $\overline{g(\dot{U_{n}})}\subseteq V_{\delta}[\overline{f(\dot{U_{n}})}]$ для кожного $ n\in \mathbb{N}$. Отже, $C(\dot{g},x_{0})\subseteq V_{\delta}[C(\dot{f},x_{0})] $. Оскільки $g\in K_{x_{0}}(X)$, то за теоремою \ref{rvqs_t1}, $g(x_{0})\in C(\dot{g},x_{0})$, а звідси $g(x_{0})\in V_{\delta}[C(\dot{f},x_{0})]$. Тоді $$\rho(g(x_{0}),C(\dot{f},x_{0}))\leq \delta,$$ а з іншого боку $\rho(f(x_{0}),C(\dot{f},x_{0}))\leq2\delta.$
+
+Отже, існує $ b\in C(\dot{f},x_{0})|\rho(g(x_{0}),b)\leq\delta$. Тоді $-|g(x_{0})-b|\geq-\delta$, $|f(x_{0})-b|\geq 2\delta$, та: $$|g(x_{0})-f(x_{0})|=|f(x_{0})-b-(-b+g(x_{0}))|\geq |f(x_{0})-b|-|g(x_{0})-b|\geq2\delta-\delta=\delta.$$
+
+Таким чином, $|g(x_{0})-f(x_{0})|\geq\delta$, і $d(f,g)\geq |g(x_{0})-f(x_{0})|\geq\delta$. Отже, для кожного $ g\in K_{x_{0}}(X)$ $d(f,g)\geq\delta$ і $d(f,g)=\delta$. Тоді $$d(f,K_{x_{0}}(X))=\delta.$$
+\end{proof} 

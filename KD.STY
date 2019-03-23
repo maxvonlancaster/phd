@@ -1,0 +1,40 @@
+
+
+
+\renewcommand{\@biblabel}[1]{#1. \hfill}
+\renewcommand{\@makechapterhead}[1]
+{
+    %\vspace*{50 pt}
+    {   \begin{center}
+        \parindent=0pt
+        %\raggedright
+        \Large\bf
+        \@chapapp{}
+        \thechapter. \par
+        %\vspace{20pt}
+        \Large\bf #1\par
+        \nopagebreak
+        \vspace{40pt}
+        \end{center}
+    }
+}
+
+\renewcommand{\@makeschapterhead}[1]
+{
+   % \vspace*{50 pt}
+    {   \begin{center}
+        \parindent=0pt
+        %\raggedright\Large\bf
+        %\@chapapp{}
+        %\thechapter %\par
+        %\vspace{20pt}
+        \Large\bf #1%\par
+        \nopagebreak
+        \vspace{40pt}
+        \end{center}
+    }
+}
+
+
+
+\endinput

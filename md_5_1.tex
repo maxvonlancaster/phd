@@ -1,0 +1,32 @@
+\newpage
+\chapter{РІВНОМІРНА ВІДСТАНЬ ДО РІЗНИХ ФУНКЦІОНАЛЬНИХ КЛАСІВ.}
+
+\section{Рівномірна відстань.}
+
+Нехай $C({\mathbb R})$ -- простір усіх неперервних функцій $f:{\mathbb R}\to {\mathbb R}$.
+Для двох функцій $f,g:{\mathbb R}\to {\mathbb R}$ розглянемо невід'ємне число $$d(f,g)=\mathop{\sup }\limits_{x\in {\mathbb R}} \left|f(x)-g(x)\right|,$$ яке може набувати і значення $+\infty $. Воно називається \textit{рівномірним відхиленням} функції $f$ від функції $g$ (див. \cite{VoloshynMasl}). Нехай $E$ -- деяка непорожня множина функцій $g:{\mathbb R}\to {\mathbb R}$ і $f:{\mathbb R}\to {\mathbb R}$ -- деяка функція. Число $$d(f,E)=\inf \left\{d(f,g):g\in E\right\}$$ назвемо \textit{відхиленням функції $f$ від множини $E$.}
+
+Зауважимо, що $d(f,C({\mathbb R}))=0$ тоді і тільки тоді, коли $f\in C({\mathbb R})$.
+
+Почнемо з таких прикладів знаходження відстані $d(f,C({\mathbb R}))$, які були досліджені в \cite{Melnyk11}.
+
+\begin{theorem}
+\label{rv_t1}
+а). Функція $f(x)=sgn\, x$ належить до першого класу Бера і $$d(f,C({\mathbb R}))=1,$$ причому існує послідовність неперервних функцій $f_{n}:{\mathbb R}\rightarrow {\mathbb R}$, така, що $d(f_{n},f)=1$ і $f_{n}(x)\rightarrow f(x)$ на ${\mathbb R}$.
+
+б). Функція $f(x)=\left[x\right]$ належить до першого класу Бера і $$d(f,C({\mathbb R}))=\frac{1}{2}.$$ При цьому функція $g(x)=x-\frac{1}{2}$ є найближчою до $f$ серед неперервних функцій $h:{\mathbb R}\rightarrow{\mathbb R}$.
+\end{theorem}
+
+\begin{proof}
+а) Для неперервних функцій $$f_{n}(x)= \left\{ \begin{array}{c} -1,\textmd{ }x<-\frac{1}{n},\\ nx,\textmd{ }-\frac{1}{n}\leq x\leq \frac{1}{n}, \\ 1,\textmd{ } x> \frac{1}{n}, \end{array} \right.$$ будемо мати, що $f_{n}(x)\rightarrow f(x)$ на ${\mathbb R}$ і $d(f_{n},f)=||f-f_{n}||=1$ для кожного $n\in {\mathbb N}$. Так само $d(f_{0},f)=1$, якщо $f_{0}(x)=0$ на ${\mathbb R}$.
+
+Нехай $g: {\mathbb R}\rightarrow {\mathbb R}$ довільна неперервна функція. Покажемо, що $||f-g||\geq 1$. Ясно, що для кожного $x\in {\mathbb R}$ виконується нерівність $$|f(x)-g(x)|\leq||f-g||=\Delta$$ зокрема,$|1-g(x)|\leq \Delta$  при $x>0$ і $|1+g(x)|\leq \Delta$ при $x<0$. Переходячи до границі, отримаємо  $$\lim\limits_{x\rightarrow -0}^{}|1+g(x)|=|1+g(0)|\leq \Delta$$ і $$\lim\limits_{x\rightarrow +0}^{}|1-g(x)|=|1-g(0)|\leq \Delta$$
+
+Якщо $g(0)<0$, то $|1-g(0)|=1-g(0)\geq 1$, а якщо $g(0)\geq 0$, то $|1+g(0)|=1+g(0)\geq 1$, таким чином $\Delta\geq 1$, що і треба було довести. Отже, $d(f,C({\mathbb R}))=1$.
+
+б) Ясно, що функція $g(x)=x-\frac{1}{2}$ неперервна. Знайдемо відстань $d(f,g)=||f-g||$.
+
+Зрозуміло, що для кожного $x\in{\mathbb R}$ виконується нерівність: $$[x]\leq x<[x]+1$$ що в еквівалентному викладі записується так: $$[x]-\frac{1}{2}\leq x-\frac{1}{2}<[x]+\frac{1}{2}$$ або $$-\frac{1}{2}\leq x-\frac{1}{2}-[x]<\frac{1}{2},$$ тобто, $$|g(x)-f(x)|=|x-\frac{1}{2}-[x]|\leq \frac{1}{2}$$ на ${\mathbb R}$. Звідси випливає, що $||g-f||\leq \frac{1}{2}.$ Але $|g(0)-f(0)|=|-\frac{1}{2}|=\frac{1}{2}$. Отже, $||g-f||=\frac{1}{2}$.
+
+Розглянемо довільну неперервну функцію $h: {\mathbb R}\rightarrow {\mathbb R}$, і доведемо, що $$||f-h||\geq \frac{1}{2}.$$ При $-1<x<0$ маємо, що: $$|f(x)-h(x)|=|1+h(x)|\leq||f-h||$$ А при $0<x<1$ виконується нерівність: $$|f(x)-h(x)|=|h(x)|\leq|f-h||$$ Переходячи до границі, будемо мати: $$\lim\limits_{x\rightarrow -0}^{}|f(x)-h(x)|=|1+h(0)|\leq ||f-h||,$$ $$\lim\limits_{x\rightarrow +0}^{}|f(x)-h(x)|=|h(0)|\leq ||f-h||.$$ Якщо $|h(0)|\geq \frac{1}{2}$, то і $||f-h||\geq \frac{1}{2}$. Якщо $|h(0)|\leq \frac{1}{2}$, то $|1+h(0)|\geq 1-|h(0)|\geq 1-\frac{1}{2}=\frac{1}{2}$. Тоді так само $||f-h||\geq\frac{1}{2}$, а отже, $d(f,C({\mathbb R}))=\frac{1}{2}.$
+\end{proof} 
